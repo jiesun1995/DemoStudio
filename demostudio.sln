@@ -9,7 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EFCore", "EFCore", "{884C5F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFDemo", "EFDemo\EFCore\EFDemo.csproj", "{952A148E-0A29-42B6-B431-6E37C74991EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutofacDemo", "AutofacDemo\AutofacDemo\AutofacDemo.csproj", "{87D8FA1B-DF57-4E5A-81D6-804416C8FAFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutofacDemo", "AutofacDemo\AutofacDemo\AutofacDemo.csproj", "{87D8FA1B-DF57-4E5A-81D6-804416C8FAFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GlobalException", "GlobalException\GlobalException.csproj", "{3145056E-BB20-4758-AE7F-F159A2F8015E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoMapper", "AutoMapper\AutoMapper.csproj", "{1D69DA10-9AD4-459B-AFFD-B3327BE86EF4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +33,14 @@ Global
 		{87D8FA1B-DF57-4E5A-81D6-804416C8FAFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87D8FA1B-DF57-4E5A-81D6-804416C8FAFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87D8FA1B-DF57-4E5A-81D6-804416C8FAFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3145056E-BB20-4758-AE7F-F159A2F8015E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3145056E-BB20-4758-AE7F-F159A2F8015E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3145056E-BB20-4758-AE7F-F159A2F8015E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3145056E-BB20-4758-AE7F-F159A2F8015E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D69DA10-9AD4-459B-AFFD-B3327BE86EF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D69DA10-9AD4-459B-AFFD-B3327BE86EF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D69DA10-9AD4-459B-AFFD-B3327BE86EF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D69DA10-9AD4-459B-AFFD-B3327BE86EF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
