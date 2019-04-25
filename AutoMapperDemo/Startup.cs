@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace AutoMapperDemo
 {
@@ -26,6 +27,17 @@ namespace AutoMapperDemo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies().ToList());
+            services.AddSwaggerGen(options =>
+            {
+                options.DescribeAllEnumsAsStrings();
+                options.SwaggerDoc("v1", new Info
+                {
+                    Title = "Basket HTTP API",
+                    Version = "v1",
+                    Description = "The Basket Service HTTP API",
+                    TermsOfService = "Terms Of Service"
+                });
+            });
             services.AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
@@ -37,7 +49,13 @@ namespace AutoMapperDemo
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseSwagger(c =>
+            {
+                //c.RouteTemplate = "api-docs/{documentName}/swagger.json";
+            }).UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
             app.UseMvc();
         }
     }

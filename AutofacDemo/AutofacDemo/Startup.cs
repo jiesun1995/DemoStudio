@@ -15,8 +15,16 @@ namespace AutofacDemo
 
         public void Run()
         {
-            _testService.Test();
-            Console.WriteLine("Running");
+            Dictionary<string, string> kvs = new Dictionary<string, string>();
+
+            //将控件的name新增进去去重
+            if (kvs.TryAdd("1", "2"))
+            {
+                //做sql拼接
+            }
+
+            //_testService.Test();
+            //Console.WriteLine("Running");
         }
     }
 }

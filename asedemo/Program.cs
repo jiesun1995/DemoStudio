@@ -9,6 +9,10 @@ namespace asedemo
     {
         static void Main(string[] args)
         {
+            
+
+
+
             string key = "c822f6d7ffa8ccf9";
             using (Stream stream = new FileStream(@"C:\Users\Administrator\Desktop\PbbU3px3049067.ts", FileMode.Open))
             {

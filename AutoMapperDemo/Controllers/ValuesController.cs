@@ -20,30 +20,32 @@ namespace AutoMapperDemo.Controllers
             _mapper = mapper;
         }
 
-        // GET api/values
+        //GET api/values
         [HttpGet]
+        [Route("")]
+        [ProducesResponseType(typeof(ViewSchool), 201)]
         public IActionResult Get()
         {
             var zhang = new Teacher()
             {
-                Id=1,
-                Name="zhang",                
+                Id = 1,
+                Name = "zhang",
             };
             var xiaoming = new Student()
             {
-                Id=1,
-                Name="xiaoming",
-                Age=12,
-                
+                Id = 1,
+                Name = "xiaoming",
+                Age = 12,
+
             };
             var school = new School()
             {
                 Id = 1,
                 Name = "昆山小学",
                 Students = new List<Student>() { xiaoming },
-                Teachers =new List<Teacher>() { zhang },
+                Teachers = new List<Teacher>() { zhang },
             };
-            var viewschool= _mapper.Map<ViewSchool>(school);
+            var viewschool = _mapper.Map<ViewSchool>(school);
 
             return Ok(viewschool);
         }
