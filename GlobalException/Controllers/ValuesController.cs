@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GlobalException.Entities;
 using GlobalException.Exceptions;
+using GlobalException.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GlobalException.Controllers
@@ -11,10 +13,19 @@ namespace GlobalException.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly IRepository<School> _schoolRepository;
+
+        public ValuesController(IRepository<School> schoolRepository)
+        {
+            _schoolRepository = schoolRepository;
+        }
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
+            var result= _schoolRepository.Add();
+            return new JsonResult(result);
             throw new Exception("这是一个异常");
             //throw new PointException("这是一个异常");
             //return new string[] { "value1", "value2" };

@@ -16,9 +16,5 @@ namespace grpcDemo
                 Message = "Hello " + request.Name
             });
         }
-        public override Task<string> TestAddFun()
-        {
-
-        }
     }
 }
