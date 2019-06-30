@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GlobalException.entities;
 using GlobalException.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 
@@ -43,6 +44,12 @@ namespace GlobalException.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+        }
+        [HttpGet]
+        [Route("Student")]
+        public IActionResult Set(InputStudent input)
+        {
+            return new JsonResult(input);
         }
     }
 }

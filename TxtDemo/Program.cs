@@ -10,6 +10,11 @@ namespace TxtDemo
     {
         static void Main(string[] args)
         {
+
+
+
+
+
             string readerFileName = @"C:\script.sql";
             string writerFileName = @"C:\script1.sql";
             string val = "use [zh_0322]";

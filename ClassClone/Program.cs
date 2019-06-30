@@ -2,6 +2,7 @@
 using System.Reflection.Emit;
 using System.Reflection;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ClassClone
 {
@@ -9,25 +10,45 @@ namespace ClassClone
     {
         static void Main(string[] args)
         {
-            School school = new School()
+
+            List<int> list = new List<int>()
             {
-                Name = "昆明小学",
-                Students = new List<Student>()
-                {
-                    new Student(){ Name="li",Age=10 },
-                    new Student(){  Name="zhang",Age=12},
-                    new Student(){  Name="sun",Age=11}
-
-                },
+                1,2,3,4,1,2,3
             };
-            var newschool = new School();
-            FastProperty<School> fastProperty = new FastProperty<School>(newschool);
+            var newlist = list.Where(x => {
+                //Console.WriteLine(x);
+                var result = !list.Any(y => {
+
+                    var result1= y == x;
+                    Console.WriteLine(y);
+                    Console.WriteLine(x);
+                    Console.WriteLine(result1);
+                    return result1; });
+                return result;
+            }).ToList();
+            Console.ReadLine();
+            //return "value";
+
+
+            //School school = new School()
+            //{
+            //    Name = "昆明小学",
+            //    Students = new List<Student>()
+            //    {
+            //        new Student(){ Name="li",Age=10 },
+            //        new Student(){  Name="zhang",Age=12},
+            //        new Student(){  Name="sun",Age=11}
+
+            //    },
+            //};
+            //var newschool = new School();
+            //FastProperty<School> fastProperty = new FastProperty<School>(newschool);
             
-            var val= fastProperty.SetPropertyValue($"{nameof(newschool.Students)}", school);
+            //var val= fastProperty.SetPropertyValue($"{nameof(newschool.Students)}", school);
             
 
 
-            Console.WriteLine("Hello World!");
+            //Console.WriteLine("Hello World!");
         }
     }
 
