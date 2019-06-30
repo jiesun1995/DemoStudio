@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace TxtDemo
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
 
 
@@ -86,5 +88,33 @@ namespace TxtDemo
             }
             Console.ReadLine();
         }
+
+        static void Main(string[] args)
+        {
+            var t1 = Task.Factory.StartNew(() =>
+            {
+                Console.WriteLine(help.num);
+                help.str = "task change help";
+                Thread.Sleep(1000);
+                Console.WriteLine(help.str);
+
+            });
+            var t2 = Task.Factory.StartNew(() =>
+            {
+                Console.WriteLine(help.str);
+                help.num = 1;
+                Thread.Sleep(1000);
+                Console.WriteLine(help.num);
+            });
+            Task.WaitAll(t1, t2);
+            Thread.Sleep(0);
+            Console.ReadLine();
+        }
+    }
+    public class help
+    {
+        public static int num = 10;
+        public static string str = "this is string";
+             
     }
 }
