@@ -31,11 +31,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Orleans", "Orleans", "{011B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "client", "Orleans\client\client.csproj", "{2017BB5F-CE3D-4ECC-9C10-0D88702B61EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Orleans\Interfaces\Interfaces.csproj", "{E2996363-0B11-4D5C-A8C6-F2F2266CD3B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "Orleans\Interfaces\Interfaces.csproj", "{E2996363-0B11-4D5C-A8C6-F2F2266CD3B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grains", "Orleans\Grains\Grains.csproj", "{A06AFB87-114F-4375-B55F-164E96F66F70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grains", "Orleans\Grains\Grains.csproj", "{A06AFB87-114F-4375-B55F-164E96F66F70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiloHost", "Orleans\SiloHost\SiloHost.csproj", "{03E04F77-EEDD-44E9-9F60-E1303CE78514}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiloHost", "Orleans\SiloHost\SiloHost.csproj", "{03E04F77-EEDD-44E9-9F60-E1303CE78514}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskDemo", "TaskDemo\TaskDemo.csproj", "{C066D1FB-2915-43F7-A8B8-AB663ABA1303}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stringint", "stringint\stringint.csproj", "{1F51CB87-181E-45F9-9B27-5A6A5664FF34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -103,6 +107,14 @@ Global
 		{03E04F77-EEDD-44E9-9F60-E1303CE78514}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03E04F77-EEDD-44E9-9F60-E1303CE78514}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03E04F77-EEDD-44E9-9F60-E1303CE78514}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C066D1FB-2915-43F7-A8B8-AB663ABA1303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C066D1FB-2915-43F7-A8B8-AB663ABA1303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C066D1FB-2915-43F7-A8B8-AB663ABA1303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C066D1FB-2915-43F7-A8B8-AB663ABA1303}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F51CB87-181E-45F9-9B27-5A6A5664FF34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F51CB87-181E-45F9-9B27-5A6A5664FF34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F51CB87-181E-45F9-9B27-5A6A5664FF34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F51CB87-181E-45F9-9B27-5A6A5664FF34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

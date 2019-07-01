@@ -25,11 +25,15 @@ namespace grpcDemo
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseRouting(routes =>
+            app.UseRouter(routes=>
             {
-                routes.MapGrpcService<GreeterService>();
+                //routes.MapGrpcService<GreeterService>();
+                //routes.MapRoute()
             });
+            //app.UseRouting(routes =>
+            //{
+            //    routes.MapGrpcService<GreeterService>();
+            //});
         }
     }
 }
