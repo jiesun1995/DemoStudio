@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using AutoMapperDemo.Entity;
+using AutoMapperDemo.Entity.InputModel;
 using AutoMapperDemo.Entity.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 
@@ -73,6 +74,12 @@ namespace AutoMapperDemo.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+        }
+        [HttpPost]
+        [Route("Student")]
+        public IActionResult Set(StudentInputModel input)
+        {
+            return new JsonResult(input);
         }
     }
 }
