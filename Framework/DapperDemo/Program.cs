@@ -24,6 +24,9 @@ from COMM.V_GGH_CLINIC_MASTER t
             var p = new DynamicParameters();
             p.Add(":ZKE197", "10044483");
             p.Add(":ZAE144", "1");
+            //Dictionary<string, string> p = new Dictionary<string, string>();
+            //p.Add(":ZKE197", "10044483");
+            //p.Add(":ZAE144", "1");
             using (var reader = con.ExecuteReader(sql, p))
             {
                 DataTable dt = new DataTable();
