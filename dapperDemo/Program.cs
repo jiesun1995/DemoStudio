@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Dapper.Common;
+using System;
 using System.Net;
+using Oracle.ManagedDataAccess.Client;
+using System.Linq;
 
 namespace dapperDemo
 {
@@ -7,19 +10,31 @@ namespace dapperDemo
     {
         static void Main(string[] args)
         {
-            IPAddress[] addressList = Dns.GetHostEntry(Dns.GetHostName()).AddressList;
+            string con = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.33.80)(PORT=1521)))(CONNECT_DATA=(sid =xe)));User Id=sj;Password=admin";
 
-            //如果本机IP列表小于2，则返回空字符串
-            if (addressList.Length < 2)
+            SessionFactory.AddDataSource(new DataSource()
             {
-                return ;
-            }
+                SourceType = DataSourceType.ORACLE,
+                Source = () => new OracleConnection (con),
+                UseProxy = true,
+                Name = "test",
+            });
+            var session = SessionFactory.GetSession("test");
 
-            //返回本机的广域网IP
-            addressList[1].ToString();
+            session.From<PersonEntity>().Insert(new PersonEntity()
+            {
+                CarId = 1,
+                CreateTime = DateTime.Now,
+                IsActive = 1,
+                PersonId = 2,
+                PersonName = "测试",
+                UpdateTime=DateTime.Now
+            });
 
+            var model = session.From<PersonEntity>().Where(x => x.PersonId == 2).Select().FirstOrDefault(); ;
 
-            Console.WriteLine("Hello World!");
+            Console.WriteLine($"{nameof(model.PersonName)}:{model.PersonName}");
+            Console.ReadLine();
         }
     }
 }

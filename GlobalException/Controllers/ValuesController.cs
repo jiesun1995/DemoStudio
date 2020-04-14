@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GlobalException.entities;
+using GlobalException.Entities;
 using GlobalException.Exceptions;
 using GlobalException.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
