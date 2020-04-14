@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace grpcDemo
+namespace gRPCDemo
 {
     public class Startup
     {
@@ -30,6 +30,8 @@ namespace grpcDemo
 
             app.UseEndpoints(endpoints =>
             {
+                // Communication with gRPC endpoints must be made through a gRPC client.
+                // To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909
                 endpoints.MapGrpcService<GreeterService>();
             });
         }
