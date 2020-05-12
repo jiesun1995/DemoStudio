@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using httpsdemo.Models;
+using httpsDemo.Models;
 
-namespace httpsdemo.Controllers
+namespace httpsDemo.Controllers
 {
     public class HomeController : Controller
     {

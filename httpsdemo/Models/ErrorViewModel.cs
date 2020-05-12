@@ -1,6 +1,6 @@
 using System;
 
-namespace httpsdemo.Models
+namespace httpsDemo.Models
 {
     public class ErrorViewModel
     {
