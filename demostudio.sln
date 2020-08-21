@@ -35,7 +35,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "Orleans\Inter
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grains", "Orleans\Grains\Grains.csproj", "{A06AFB87-114F-4375-B55F-164E96F66F70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiloHost", "Orleans\SiloHost\SiloHost.csproj", "{03E04F77-EEDD-44E9-9F60-E1303CE78514}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiloHost", "Orleans\SiloHost\SiloHost.csproj", "{03E04F77-EEDD-44E9-9F60-E1303CE78514}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskDemo", "TaskDemo\TaskDemo.csproj", "{C066D1FB-2915-43F7-A8B8-AB663ABA1303}"
 EndProject
@@ -53,7 +53,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnettyDemo", "dotnettyDem
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "httpsDemo", "httpsDemo\httpsDemo.csproj", "{92DE55D1-E9F8-453F-9AE5-CA30109C2342}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "https3", "https3\https3.csproj", "{2E6915FD-F71D-4574-8EB8-39613EE57AC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "https3", "https3\https3.csproj", "{2E6915FD-F71D-4574-8EB8-39613EE57AC9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "rabbitmqDemo", "rabbitmqDemo\rabbitmqDemo.csproj", "{632E1729-66B6-4268-8EBD-CE4ED0E1118C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -145,10 +147,18 @@ Global
 		{D0C2E02D-5701-4850-B1C7-5A205162D119}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0C2E02D-5701-4850-B1C7-5A205162D119}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0C2E02D-5701-4850-B1C7-5A205162D119}.Release|Any CPU.Build.0 = Release|Any CPU
-		{949883E0-6B4C-4EE2-8DA6-23638B35B73A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{949883E0-6B4C-4EE2-8DA6-23638B35B73A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{949883E0-6B4C-4EE2-8DA6-23638B35B73A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{949883E0-6B4C-4EE2-8DA6-23638B35B73A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92DE55D1-E9F8-453F-9AE5-CA30109C2342}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92DE55D1-E9F8-453F-9AE5-CA30109C2342}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92DE55D1-E9F8-453F-9AE5-CA30109C2342}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92DE55D1-E9F8-453F-9AE5-CA30109C2342}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E6915FD-F71D-4574-8EB8-39613EE57AC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E6915FD-F71D-4574-8EB8-39613EE57AC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E6915FD-F71D-4574-8EB8-39613EE57AC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E6915FD-F71D-4574-8EB8-39613EE57AC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{632E1729-66B6-4268-8EBD-CE4ED0E1118C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{632E1729-66B6-4268-8EBD-CE4ED0E1118C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{632E1729-66B6-4268-8EBD-CE4ED0E1118C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{632E1729-66B6-4268-8EBD-CE4ED0E1118C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
