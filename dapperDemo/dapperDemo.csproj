@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -8,7 +8,7 @@
   <ItemGroup>
     <PackageReference Include="Dapper.Common" Version="1.5.0.1" />
     <PackageReference Include="LnskyDB" Version="1.0.1" />
-    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="2.19.3" />
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="2.19.180" />
   </ItemGroup>
 
 </Project>
